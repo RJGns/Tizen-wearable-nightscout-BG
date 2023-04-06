@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/Nightscout" version="1.0.0" viewmodes="maximized">
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/Nightscout" version="1.0.0" viewmodes="maximized">
     <tizen:app-widget id="7i1IpWL7Up.Nightscout.Nightscout" primary="true">
-        <tizen:widget-label>Hello Web Widget!</tizen:widget-label>
+        <tizen:widget-label>Nightscout</tizen:widget-label>
         <tizen:widget-content src="widget/Nightscout/index.html">
             <tizen:widget-size preview="widget/Nightscout/preview.png">2x2</tizen:widget-size>
         </tizen:widget-content>
@@ -10,7 +10,7 @@
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.normal"/>
     <icon src="icon.png"/>
-    <name>Nightscout</name>
+    <name>NightscoutOnWatch</name>
     <tizen:privilege name="http://tizen.org/privilege/internet"/>
     <tizen:profile name="wearable"/>
 </widget>
