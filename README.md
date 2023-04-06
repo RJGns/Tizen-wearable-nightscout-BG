@@ -10,3 +10,6 @@ Built using Tizen SDK, in the form of a web widget (comes bundled with a normal 
 5. In ```widget>Nightscout>js>main.js``` change line 4 to your nightscout address ```var myapi = "https://YOURNIGHTSOCUT/api/v1/entries.json";```
 6. Press the run button in the tab bar and it should be built and run on your watch.
 ### This process may be complicated, feel free to open an issue if you need help. 
+## Change to mgdl
+1. In ```widget>Nightscout>js>main.js``` change line 23 from ```document.getElementById("current").textContent = String(Math.round(obj[0].sgv * 0.0555 * 10)/10);``` to ```document.getElementById("current").textContent = String(obj[0].sgv);```
+2. Carry on with installation.
