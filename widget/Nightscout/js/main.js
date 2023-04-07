@@ -20,7 +20,7 @@ window.onload = function() {
 		    xmlHttp.open( "GET", myapi, false ); // false for synchronous request
 		    xmlHttp.send( null );
 		    var obj = JSON.parse(xmlHttp.responseText);
-		    document.getElementById("current").textContent = String(Math.round(obj[0].sgv * 0.0555 * 10)/10);
+		    document.getElementById("current").textContent = String(Math.round(obj[0].sgv * 0.0555 * 10)/10) +" "+ obj[0].direction;
 		    
 		   
 		    document.getElementById("update").textContent = "Update";
