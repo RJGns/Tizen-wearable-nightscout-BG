@@ -10,9 +10,10 @@ powershell -Command "(gc "Tizen-wearable-nightscout-BG\widget\Nightscout\js\main
 if "%mmol%"=="1" (goto start1)
 if "%mmol%"=="2" (goto start2)
 echo Invalid
+:start2
+powershell -Command "(gc "Tizen-wearable-nightscout-BG\widget\Nightscout\js\main.js") -replace '0.055', '6-' | Out-File -encoding ASCII Tizen-wearable-nightscout-BG\widget\Nightscout\js\main.js"
 :start1
 echo Done! Now install Tizen Studio (https://developer.tizen.org/zh-hans/development/tizen-studio/download) and check here (https://github.com/RJGns/Tizen-wearable-nightscout-BG) for instructions on how to deploy to your watch.
-:start2
-powershell -Command "(gc "Tizen-wearable-nightscout-BG\widget\Nightscout\js\main.js") -replace '0.055', '1' | Out-File -encoding ASCII Tizen-wearable-nightscout-BG\widget\Nightscout\js\main.js"
-goto start1
+
+
 pause
