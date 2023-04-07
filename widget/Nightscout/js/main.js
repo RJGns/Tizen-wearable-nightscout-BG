@@ -2,7 +2,7 @@
 window.onload = function() {
   console.log('+[window.onload]');
   // Do nothing now
-  var myapi = "https://YOURNIGHTSOCUT/api/v1/entries.json";
+  var myapi = "https://YOURURL/api/v1/entries.json";
 	  
   document.getElementById("update").addEventListener("click", updateCurrent);
   
@@ -20,12 +20,13 @@ window.onload = function() {
 		    xmlHttp.open( "GET", myapi, false ); // false for synchronous request
 		    xmlHttp.send( null );
 		    var obj = JSON.parse(xmlHttp.responseText);
-		    document.getElementById("current").textContent = String(Math.round(obj[0].sgv * 0.0555 * 10)/10) +" "+ obj[0].direction;
+		    document.getElementById("current").textContent = String(Math.round(obj[0].sgv * 0.0555 * 10)/10 +" "+ obj[0].direction);
 		    
 		   
 		    document.getElementById("update").textContent = "Update";
-		    
-		    document.getElementById("time").textContent =  new Date().toTimeString().split(" ")[0];
+		    var x = new Date().toTimeString().split(" ")[0];
+		    var y = obj[0].dateString.split("T");
+		    document.getElementById("time").textContent =  String(x +" From: "+ y[1].split(".")[0]);
 		  	}, 100);
 	    
 	  }
