@@ -2,7 +2,7 @@
 window.onload = function() {
   console.log('+[window.onload]');
   // Do nothing now
-  var myapi = "https://YOURURL/api/v1/entries.json";
+  var myapi = "https://URL/api/v1/entries.json";
 	  
   document.getElementById("update").addEventListener("click", updateCurrent);
   
