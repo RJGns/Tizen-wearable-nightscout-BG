@@ -6,23 +6,40 @@ A very simple widget that queries the nightscout API to display blood glucose in
 
 ## Building
 
-1. Run the install script by double clicking on it. This installs the widget to your computer. It also configures your project to use you nightscout URL and desired bg unit. RECOMMENDED
+### 1. Run the install script
+Do this by double clicking on it. This installs the widget to your computer. It also configures your project to use you nightscout URL and desired bg unit. 
 
-2. Install Tizen Studio, along with the Tizen wearable for your watch, along with the Samsung certificate manager (may be in the "Extras" tab).
+![image](https://user-images.githubusercontent.com/64732379/230693231-5b62a2e5-6f54-4b6f-bc3d-682f8e62e540.png)
 
-3. Go to `Tools > Device Manager` and connect to your watch. [Instructions here, when connecting for the first time, make sure the watch is on and NOT on the watch face - scroll to a widget](https://docs.tizen.org/application/dotnet/get-started/wearable-connection/).
+### 2. [Install Tizen Studio](https://developer.tizen.org/zh-hans/development/tizen-studio/download)
+Make sure to pick the version "with IDE installer".
 
-4. Go to `Tools > Certificate Manager` and make a new certificate, choosing Samsung if you need to. Follow the instructions to make a certificate. Make sure only one DUID is selected.
+![image](https://user-images.githubusercontent.com/64732379/230693842-b91a9030-eafc-4cb3-9da3-980e7622eb43.png)
 
-5. Press the run button in the tab bar, and it should be built and run on your watch.
+Accept license agreements and choose a location to install to. Tizen Studio will now be installed.
 
-### This process may be complicated. Feel free to open an issue if you need help.
+![image](https://user-images.githubusercontent.com/64732379/230693793-b232c904-8eee-4f3b-89c0-e3902af99c55.png)
 
-## Change to mg/dL
-1. Us install script
+Press finish to open the package manager. When it is open: install the version that corresponds to your watch Tizen version (you can find this in your watch settings). If you have a Gear S3 and are on the latest firmware, it will likely be 4.0. Press install.
 
-### OR
+![image](https://user-images.githubusercontent.com/64732379/230693970-6b88c4ee-9d5f-452e-9d0e-cebd42878d22.png)
 
-1. In `widget > Nightscout > js > main.js`, change line 23 from `document.getElementById("current").textContent = String(Math.round(obj[0].sgv * 0.0555 * 10)/10);` to `document.getElementById("current").textContent = String(obj[0].sgv);`
+In the Extension SDK tab, scroll to the bottom and install both the Samsung Certificate Extension and Wearable Extension.
 
-2. Carry on with the installation.
+![image](https://user-images.githubusercontent.com/64732379/230694115-3632122d-0d69-4bfe-8eb9-e47943669f77.png)
+
+Close the package manager and tick the box to launch Tizen Studio.
+
+### 3. Opening Project
+In Tizen Studio, go to `File>Open Projects from file system` (your window may look different to mine.
+
+![image](https://user-images.githubusercontent.com/64732379/230694272-6b3eaeb9-982e-4f87-9889-c5c82ddd2d39.png)
+
+Click on `Directory...` then choose the folder the install script downloaded. It will be in the same place as where you launched the script and the folder is called `Tizen-wearable-nightscout-BG`
+
+![image](https://user-images.githubusercontent.com/64732379/230694340-1153bb02-3032-41b5-939a-645e41799a92.png)
+
+Press OK, then Finish. A project should now be visible in the Project Explorer.
+
+Verify your details were set correctly by naviagting to `widget>Nightscout>js>Main.js`. Double click to open.
+
