@@ -43,3 +43,21 @@ Press OK, then Finish. A project should now be visible in the Project Explorer.
 
 Verify your details were set correctly by naviagting to `widget>Nightscout>js>Main.js`. Double click to open.
 
+You might need to fill in the switch statement with the proper emojis for the arrows as they seem to revert to the default unicode error symbol for some reason.
+
+### 4. Connect to watch
+
+Open the device manager in Tizen Studio. Click remote device manager in top right. Click add.
+
+On your watch connect to WiFi (set to always on, not auto) then go into wifi details and note the IP address. Enable developer options in watch by going to about and click on build version 5 times. Go into about and scroll down to where it says debugging, click on it and enable it. Restart watch.
+
+Go back to TZ and connect to the watch, the watch screen needs to be on and on a screen that isn't the watch face (any one will do). A connection prompt should appear. Accept.
+
+### 5. Generate Certificates.
+
+Go to the certificate manager. Follow the steps to generate a Samsung partner certificate. MUST BE A PARTNER CERTIFICATE. 
+
+### 6. Click run
+
+It should now be installed to your watch.
+
